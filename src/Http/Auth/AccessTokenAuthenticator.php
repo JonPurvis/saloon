@@ -18,9 +18,9 @@ class AccessTokenAuthenticator implements OAuthAuthenticator
      * @param \DateTimeImmutable|null $expiresAt
      */
     public function __construct(
-        readonly public string             $accessToken,
-        readonly public ?string            $refreshToken = null,
-        readonly public ?DateTimeImmutable $expiresAt = null,
+        public readonly string             $accessToken,
+        public readonly ?string            $refreshToken = null,
+        public readonly ?DateTimeImmutable $expiresAt = null,
     ) {
         //
     }
